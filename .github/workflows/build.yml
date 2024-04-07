@@ -1,0 +1,27 @@
+name: Build
+
+on: 
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        container:
+            image: docker.io/cypress/browsers
+        
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                node-version: 14    
+            
+            - uses: mobile-dev-inc/action-maestro-cloud@v1.1.0
+              with:
+                name: Maestro
+                api-key: a85f4221-12de-4833-a99a-ffbbff3145b1
+                app-file: qazandofoodnovo.apk
