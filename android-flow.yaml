@@ -1,0 +1,16 @@
+appId: com.qazandoqafood
+---
+- launchApp
+- assertVisible:
+    id: email
+- tapOn:
+    id: email
+- inputText: qazando@gmail.com
+- assertVisible:
+    id: password
+- tapOn:
+    id: password
+- inputText: 123456
+- tapOn:
+    id: login-button
+- assertVisible: Erro ao realizar login

@@ -1,0 +1,14 @@
+appId: com.qazandoqafood
+---
+- launchApp
+- repeat:
+    while:
+        notVisible: "Erro ao realizar login"
+    commands:
+        - tapOn: "login-button"
+
+# - repeat:  (for)
+#     times: 3
+#     commands:
+#         - tapOn:
+#             id: login-button
