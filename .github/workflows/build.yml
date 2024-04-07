@@ -23,5 +23,5 @@ jobs:
             - uses: mobile-dev-inc/action-maestro-cloud@v1.1.0
               with:
                 name: Maestro
-                api-key: a85f4221-12de-4833-a99a-ffbbff3145b1
+                api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
                 app-file: qazandofoodnovo.apk
